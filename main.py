@@ -79,3 +79,67 @@ else:
 
 # 🔹 Desafio 4 – Nível Fácil
 
+class Animal():
+
+    def falar (self):
+
+        return "Som genérico"
+
+class Gato(Animal):
+
+    def falar (self):
+
+        return "Miau!"
+
+class Cachorro(Animal):
+
+    def falar (self):
+
+        return "Au au!"
+
+animais = [Gato(), Cachorro()]
+
+for animal in animais:
+
+    print(animal.falar())
+
+# 🔹 Desafio 5 – Nível Médio
+
+class Animal():
+
+    def falar(self):
+
+        return "Som genérico"
+    
+    def __init__(self, nome, idade):
+        
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+
+        return f"\nNome: {self.nome}\nIdade: {self.idade}"
+class Gato(Animal):
+
+    def __init__(self, nome, idade):
+        super().__init__(nome, idade)
+
+    def falar (self):
+
+        return "Miau!\n"
+
+class Cachorro(Animal):
+
+    def __init__(self, nome, idade):
+        super().__init__(nome, idade)
+
+    def falar (self):
+
+        return "Au au!\n"
+
+animais = [Gato("Mingau", 3), Cachorro("Rex", 5)]
+
+for animal in animais:
+
+    print(animal.apresentar())
+    print(animal.falar())
