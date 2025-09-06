@@ -7,8 +7,7 @@ print("\nCálculo de Raiz Quadrada")
 numero = int(input("\nNúmero: "))
 
 def raizQuadrada(numero):
-    raiz = round(math.sqrt(numero))
-    return raiz
+    return round(math.sqrt(numero))
 
 print(f"\nRaiz: {raizQuadrada(numero)}\n")
 
@@ -19,16 +18,13 @@ print("\nArredondamento (cima, baixo e inteiro mais próximo)")
 numeroReal = float(input("\nNúmero real: "))
 
 def arredondarCima(numeroReal):
-    paraCima = math.ceil(numeroReal)
-    return paraCima
+    return math.ceil(numeroReal)
 
 def arredondarBaixo(numeroReal):
-    paraBaixo = math.floor(numeroReal)
-    return paraBaixo
+    return math.floor(numeroReal)
 
 def arredondarProximo(numeroReal):
-    intProximo = round(numeroReal)
-    return intProximo
+    return round(numeroReal)
 
 print(
     f"\nNúmero arredondado para cima: {arredondarCima(numeroReal)}\n"
@@ -41,18 +37,15 @@ print(
 print("\nCalculadora Geométrica")
 
 class FiguraGeometrica():
-
+    
     def areaCirculo(raio):
-        area = round(math.pi * (math.pow(raio, 2)))
-        return area
+        return round(math.pi * (math.pow(raio, 2)))
 
     def areaTriangulo(base, altura):
-        area = round((base * altura) / 2)
-        return area
+        return round((base * altura) / 2)
     
     def hipotenusaTrianguloReto(catetoOposto, catetoAdjacente):
-        hipotenusa = round(math.sqrt(((math.pow(catetoOposto, 2)) + (math.pow(catetoAdjacente, 2)))))
-        return hipotenusa
+        return round(math.sqrt(((math.pow(catetoOposto, 2)) + (math.pow(catetoAdjacente, 2)))))
 
 opcao = int(input(
     "\n1 - Área de Circunferência\
@@ -62,24 +55,20 @@ opcao = int(input(
 ))
 
 if opcao == 1:
-
     raio = float(input("\nRaio da circunferência: "))
     print(f"\nÁrea da circunferência: {FiguraGeometrica.areaCirculo(raio)}\n")
 
 elif opcao == 2:
-
     base = float(input("\nBase do triângulo: "))
     altura = float(input("Altura do triângulo: "))
     print(f"\nÁrea do triângulo: {FiguraGeometrica.areaTriangulo(base, altura)}\n")
 
 elif opcao == 3:
-
     catetoOposto = float(input("\nCateto oposto: "))
     catetoAdjacente = float(input("Cateto adjacente: "))
     print(f"\nHipotenusa do triângulo reto: {FiguraGeometrica.hipotenusaTrianguloReto(catetoOposto, catetoAdjacente)}\n")
 
 else:
-
     print("\nOpção inválida.\n")
 
 # 🔹 Desafio 4 – Nível Fácil
@@ -87,17 +76,14 @@ else:
 print("\nAnimais Simples\n")
 
 class Animal():
-
     def falar(self):
         return "Som genérico"
 
 class Gato(Animal):
-
     def falar(self):
         return "Miau!"
 
 class Cachorro(Animal):
-
     def falar(self):
         return "Au au!"
 
